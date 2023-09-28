@@ -17,14 +17,13 @@ const CarouselIndex = ({data}:{data:any}) => {
         <Carousel
         additionalTransfrom={0}
         arrows
-        autoPlay
-        autoPlaySpeed={2500}
-        centerMode={true}
+        autoPlaySpeed={2600}
+        centerMode={false}
         className=""
-        containerClass="container-with-dots"
+        containerClass="container"
         dotListClass=""
-        draggable
-        
+        draggable={true}
+        autoPlay
         focusOnSelect={false}
         infinite
         itemClass=""
@@ -66,8 +65,9 @@ const CarouselIndex = ({data}:{data:any}) => {
         shouldResetAutoplay
         showDots={false}
         sliderClass=""
-        slidesToSlide={2}
+        slidesToSlide={1}
         swipeable
+      
       >
         {data ? (
         data.map((e: any) => (
