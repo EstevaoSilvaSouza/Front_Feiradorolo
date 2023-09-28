@@ -1,4 +1,4 @@
-import { Box, ButtonLoad, CardBtns, ImageCard, NewTag, Title } from "./listitens.styled";
+import { Box, ButtonLoad, CardBtns, NewTag } from "./listitens.styled";
 import imagebanner from '../../banner.png'
 import React from "react";
 import { Api } from "../../context/Api";

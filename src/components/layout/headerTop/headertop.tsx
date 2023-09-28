@@ -1,5 +1,5 @@
 import React from "react";
-import { AMessage, BtnAnucio, BtnEntrar, BtnSair, BtnSearch, DivHeader, DivMessage, InputSeachMenu, LinkS, Lista, LogoContainer, LogoText, MenuItem, MenuLauch, MobileMenu } from "./styleheadertop";
+import { AMessage, BtnAnucio, BtnEntrar, BtnSair, BtnSearch, DivHeader, DivMessage, InputSeachMenu, LinkS, Lista, LogoContainer, LogoText, MenuItem, MenuLauch } from "./styleheadertop";
 import { AuthContext } from "../../../context/Auth.context";
 import Menu from '../../../menu.png'
 const HeaderTop = () => {

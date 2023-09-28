@@ -1,10 +1,11 @@
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css";
-import { CardDestaque, ImgCardTop } from "./index.styled";
+import { CardDestaque } from "./index.styled";
 import imagebanner from '../../banner.png'
 import LazyImage2 from "../../components/image/lazyimage2";
 import { NewTag } from "../../components/listitens/listitens.styled";
 import {useNavigate} from 'react-router-dom'
+
 const CarouselIndex = ({data}:{data:any}) => {
 
   const navigate = useNavigate();

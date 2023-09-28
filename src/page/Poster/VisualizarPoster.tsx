@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import {
   ProductContainer,
@@ -57,7 +57,7 @@ interface ResponseData {
 
 
 const VisualizarProduto = () => {
-  const { id, nome } = useParams();
+  const { id } = useParams();
   const [showLargeImage, setShowLargeImage] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [Data, setData] = useState<ResponseData>();

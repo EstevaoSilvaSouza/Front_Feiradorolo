@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import CardBtns from "../../components/card/cardBtns";
-import { CardDestaque, DivMenuFly, OuterDiv, SectionTitle } from "./index.styled";
+import {  DivMenuFly, SectionTitle } from "./index.styled";
 import imageBaner from '../../banner.png';
 import ListenItens from "../../components/listitens/listitens";
 import { DivImage, ImageBan } from "../../style-app";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Api } from "../../context/Api";
 import CarouselIndex from "./Carousel";

@@ -1,5 +1,4 @@
-import React, { useRef, useEffect } from "react";
-import { ImageCard } from "../listitens/listitens.styled";
+import { useRef, useEffect } from "react";
 import { ImgCardTop } from "../../page/Inicio/index.styled";
 
 const LazyImage2 = ({ src, alt }:{src?:any,alt?:any}) => {
