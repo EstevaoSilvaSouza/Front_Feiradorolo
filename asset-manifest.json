@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.a8df395d.css",
-    "main.js": "/static/js/main.cf6abffd.js",
-    "static/media/logoLogin.gif": "/static/media/logoLogin.06464f8d777ddc5e06e8.gif",
-    "static/media/banner.png": "/static/media/banner.36b444b7169b60fe2b38.png",
-    "static/media/menu.png": "/static/media/menu.745580e91f9a46765063.png",
-    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
-    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
-    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
-    "index.html": "/index.html",
-    "main.a8df395d.css.map": "/static/css/main.a8df395d.css.map",
-    "main.cf6abffd.js.map": "/static/js/main.cf6abffd.js.map"
+    "main.css": "/Front_Feiradorolo/static/css/main.b7946f95.css",
+    "main.js": "/Front_Feiradorolo/static/js/main.e7db291d.js",
+    "static/media/logoLogin.gif": "/Front_Feiradorolo/static/media/logoLogin.06464f8d777ddc5e06e8.gif",
+    "static/media/banner.png": "/Front_Feiradorolo/static/media/banner.36b444b7169b60fe2b38.png",
+    "static/media/menu.png": "/Front_Feiradorolo/static/media/menu.745580e91f9a46765063.png",
+    "static/media/revicons.eot": "/Front_Feiradorolo/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/Front_Feiradorolo/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/Front_Feiradorolo/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/Front_Feiradorolo/index.html",
+    "main.b7946f95.css.map": "/Front_Feiradorolo/static/css/main.b7946f95.css.map",
+    "main.e7db291d.js.map": "/Front_Feiradorolo/static/js/main.e7db291d.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8df395d.css",
-    "static/js/main.cf6abffd.js"
+    "static/css/main.b7946f95.css",
+    "static/js/main.e7db291d.js"
   ]
 }
