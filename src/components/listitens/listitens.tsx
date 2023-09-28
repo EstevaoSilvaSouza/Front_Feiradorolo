@@ -29,6 +29,7 @@ const ListenItens = ({Url, TitleMenu,Token,page}: ListItens) => {
         CountPage: 0,
         Data: [],
     });
+    const btnRef = React.useRef<HTMLButtonElement>(null!);
     const navigate = useNavigate();
 
     const redirectViewPage = (id:string,nome:string,desc:string) => {
@@ -71,6 +72,8 @@ const ListenItens = ({Url, TitleMenu,Token,page}: ListItens) => {
     },[])
 
     const addItens = async () => {
+        btnRef.current.disabled = true;
+        btnRef.current.innerHTML = 'Carregando....';
         if (take > Data.CountPage * 15) {
             return;
         }
@@ -84,6 +87,8 @@ const ListenItens = ({Url, TitleMenu,Token,page}: ListItens) => {
         });
        
         if (data.Data) {
+            btnRef.current.disabled = false;
+            btnRef.current.innerHTML = 'Carregar mais';
             setTake(take + 15);
             setData(prev => ({
                 ...prev,
@@ -91,6 +96,8 @@ const ListenItens = ({Url, TitleMenu,Token,page}: ListItens) => {
             }));
        }}
        catch(error:any){
+        btnRef.current.disabled = false;
+        btnRef.current.innerHTML = 'Carregar mais';
         if(error.name === 'AbortError'){
             abortController2.abort();
             return null;
@@ -122,7 +129,7 @@ const ListenItens = ({Url, TitleMenu,Token,page}: ListItens) => {
         
        </Box>
        <Box>
-       <ButtonLoad  type="button" onClick={addItens}>Carregar mais</ButtonLoad>
+       <ButtonLoad  type="button" ref={btnRef} onClick={addItens}>Carregar mais</ButtonLoad>
        </Box>
        </>
     )
