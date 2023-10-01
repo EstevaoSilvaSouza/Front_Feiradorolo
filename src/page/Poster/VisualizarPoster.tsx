@@ -140,7 +140,7 @@ const VisualizarProduto = () => {
             <h2>{Data?.Data?.City}</h2>
             <h3>{Data?.Data?.User?.Name}</h3>
             <Price>{`Preço: R$ ${Data?.Data?.Value}`}</Price>
-            <Button onClick={() => sendWhats(Data?.Data?.User?.Phone!)}>
+            <Button onClick={() => sendWhats(Data?.Data?.PhoneCustom!)}>
               <WhatsAppIcon /> Contatar via WhatsApp
             </Button>
           </ProductInfo>
