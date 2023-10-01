@@ -7,6 +7,7 @@ import Login from '../page/Login/Login';
 import MeusPoster from '../page/Poster/MeusPoster';
 import NovoPoster from '../page/Poster/NovoPoster';
 import VisualizarPoster from '../page/Poster/VisualizarPoster';
+import AutalizarPoster from '../page/Poster/AtualizarPoster';
 
 const RouterMain = () => {
     return (
@@ -19,6 +20,7 @@ const RouterMain = () => {
                         <Route path='/' element={<AuthPage/>}>
                             <Route path='/meus-anuncios' element={<MeusPoster/>}/>
                             <Route path='/novo-anuncio' element={<NovoPoster/>}/>
+                            <Route path='/atualizar-anuncio/:nome/:Id' element={<AutalizarPoster/>}/>
                         </Route>
                         <Route path='/anuncio/:nome/:id' element={<VisualizarPoster/>}/>
                         <Route path='/login' element={<Login/>}/>

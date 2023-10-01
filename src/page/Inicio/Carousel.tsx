@@ -22,7 +22,7 @@ const CarouselIndex = ({data}:{data:any}) => {
         className=""
         containerClass="container"
         dotListClass=""
-        draggable={true}
+        draggable={false}
         autoPlay
         focusOnSelect={false}
         infinite

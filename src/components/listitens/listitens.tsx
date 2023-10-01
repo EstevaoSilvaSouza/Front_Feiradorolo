@@ -37,7 +37,7 @@ const ListenItens = ({Url, TitleMenu,Token,page}: ListItens) => {
     }
 
     const redirectUpdatePage = (id:string,nome:string,desc:string) => {
-        navigate(`/anuncio/atualizar/${nome.split(' ').join('-')}_${desc.split(' ').join('-')} /${id}`);
+        navigate(`/atualizar-anuncio/${nome.split(' ').join('-')}_${desc.split(' ').join('-')} /${id}`);
     }
 
     const abortController2 = new AbortController();

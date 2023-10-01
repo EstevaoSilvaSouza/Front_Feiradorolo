@@ -40,11 +40,11 @@ const NovoPoster = () => {
             headers: { Authorization: `Bearer ${Token}` },
           });
           if (data) {
-              toast.success("Anuncio criado com sucesso", {
+              toast.success("Anuncio criado com sucesso, adicione uma imagem agora", {
                   position: toast.POSITION.TOP_CENTER,
                   autoClose:2000,
                 });
-                navigate('/meus-anuncios')
+                navigate(`/atualizar-anuncio/${data.Name.split(' ').join('-')}_${data.Description.split(' ').join('-')} /${data.Id}`)
           }
           else{
             toast.info("Falha ao criar Anuncio", {
