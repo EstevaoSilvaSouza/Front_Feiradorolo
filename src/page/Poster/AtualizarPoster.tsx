@@ -118,7 +118,6 @@ const AtualizarPoster = () => {
 
   return (
     <>
-     <iframe width="560" height="315" src="//mixdrop.co/e/n0d6m7k7bjvqd1" frameBorder="0" allowFullScreen></iframe>
       <h1 style={{textAlign:'center', fontSize:'20px'}}>Atualizar Anuncio {Data?.Data?.Name}</h1>
       <Container>
 
