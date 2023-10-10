@@ -7,6 +7,8 @@ import Loading from "../../page/Inicio/LoadPage";
 import { useNavigate} from 'react-router-dom'
 import { format } from "date-fns";
 import { SectionTitle } from "../../page/Inicio/index.styled";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye } from '@fortawesome/free-solid-svg-icons'
 
 interface ItensLoad {
     Count: number,
@@ -119,6 +121,9 @@ const ListenItens = ({Url, TitleMenu,Token,page}: ListItens) => {
                         <h5>{e?.Name}</h5>
                         <h5>R$ {e?.Value}</h5>
                         <h5>{e?.City} - {format(new Date(e?.createdAt), "dd/MM/yyyy HH:mm")}</h5>
+                        <h5>
+                            <FontAwesomeIcon icon={faEye} /> {e?.Count}
+                        </h5>
                         { page === "view" && (<NewTag>Novo</NewTag>)}
                         </CardBtns>
                     ))}
