@@ -1,6 +1,6 @@
 import React  from "react";
 import {AuthContext} from '../../context/Auth.context';
-import { Box, BoxLogin, ImgLogo, InputLogin, BtnLogin, DivInpt } from "./Login.styled";
+import { Box, BoxLogin, ImgLogo, InputLogin, BtnLogin, DivInpt, DivInpts } from "./Login.styled";
 import LogoLogin from '../../logoLogin.gif'
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -25,8 +25,10 @@ const Login = () => {
                 autoClose:2000,
               });
             navigate("/meus-anuncios")
-           }
-        })
+           }})}
+
+    const register = () => {
+        navigate('/nova-conta')
     }
 
     return (
@@ -43,8 +45,11 @@ const Login = () => {
                     <label htmlFor="Password">Password</label>
                     <InputLogin id='Password' name='Password' type="password" required placeholder="Senha de acesso" onChange={handleInput}/>
                 </DivInpt>
-              
-                <BtnLogin type="button" onClick={submit}>Acessar</BtnLogin>
+                <DivInpts>
+                    <BtnLogin type="button" onClick={submit}>Acessar</BtnLogin>
+                    <BtnLogin type="button" onClick={register}>Registrar</BtnLogin>    
+                </DivInpts>
+                
             </BoxLogin>
         </Box>
     )

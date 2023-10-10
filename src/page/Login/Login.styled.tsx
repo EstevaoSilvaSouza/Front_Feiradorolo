@@ -32,7 +32,7 @@ export const InputLogin = styled.input`
     max-width: 500px;
     height: 40px;
     border-radius: 5px;
-    margin: 10px;
+    margin: 15px;
     text-align: center;
     @media (max-width: 768px) {
         width:300px;
@@ -56,6 +56,10 @@ export const BtnLogin = styled.button`
 export const DivInpt = styled.div`
     display: flex;
     flex-direction: column;
-    
+`;
 
+export const DivInpts = styled.div`
+    display: flex;
+    width:100%;
+    padding:10px
 `;

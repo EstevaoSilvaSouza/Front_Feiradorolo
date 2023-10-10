@@ -8,12 +8,12 @@ import MeusPoster from '../page/Poster/MeusPoster';
 import NovoPoster from '../page/Poster/NovoPoster';
 import VisualizarPoster from '../page/Poster/VisualizarPoster';
 import AutalizarPoster from '../page/Poster/AtualizarPoster';
+import Cadastro from '../page/Cadastro/Cadastro';
 
 const RouterMain = () => {
     return (
         <>
             <HeaderTop/>
-
                 <Container>
                     <Routes>
                     <Route path='/' element={<Index/>}/>
@@ -24,6 +24,7 @@ const RouterMain = () => {
                         </Route>
                         <Route path='/anuncio/:nome/:id' element={<VisualizarPoster/>}/>
                         <Route path='/login' element={<Login/>}/>
+                        <Route path='/nova-conta' element={<Cadastro/>}/>
                         <Route path='*' element={<><h1>PAGINA NÃO ENCONTRADA</h1></>}/>
                     </Routes>
                 </Container>

@@ -13,7 +13,7 @@ const bounceAnimation = keyframes`
 export const DivHeader = styled.div`
   width: 95%;
   margin: 0 auto;
-  margin-top: 85px; /* Aumente o valor para criar espaço para a DivMessage */
+  margin-top: 15px; /* Aumente o valor para criar espaço para a DivMessage */
   margin-bottom: 15px;
   border-radius: 15px;
   height: 100px;
@@ -56,17 +56,17 @@ const waveAnimation = keyframes`
 `;
 
 export const DivMessage = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
+  //position: fixed;
+  //top: 0;
+  //left: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   background: linear-gradient(to right, #008000, #FFFF00);
 
-  height: 70px;
+  height: 120px;
   align-items: center;
-  z-index: 0;
+  //z-index: 0;
   animation: ${waveAnimation} 2s infinite; /* Aplica a animação às letras */
 
   @media (max-width: 768px) {
