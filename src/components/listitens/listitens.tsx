@@ -59,10 +59,7 @@ const ListenItens = ({Url, TitleMenu,Token,page}: ListItens) => {
           
               if (data.Data) {
                 setLoad(!load);
-                setData(prev => ({
-                    ...prev,
-                    Data: [...prev.Data, ...data.Data], // Adicione os elementos diretamente
-                }));
+                setData(data);
                 setTake(take + 15);
               }
             } catch (error:any) {
@@ -74,9 +71,42 @@ const ListenItens = ({Url, TitleMenu,Token,page}: ListItens) => {
         return () => {
             abortController.abort();
         }
-    },[take])
+    },[])
 
-    
+    const addItens = async () => {
+        btnRef.current.disabled = true;
+        btnRef.current.innerHTML = 'Carregando....';
+        if (take > Data.CountPage * 15) {
+            return;
+        }
+       
+       try{
+        const { data } = await Api.get(Url!.includes('0') ? Url!.replace('0',`${take}`) : Url!,  {
+            headers:{
+                Authorization:Token ? `Bearer ${Token}` : null
+            },
+            signal:signal2
+        });
+       
+        if (data.Data) {
+            btnRef.current.disabled = false;
+            btnRef.current.innerHTML = 'Carregar mais';
+            setTake(take + 15);
+            setData(prev => ({
+                ...prev,
+                Data: [...prev.Data, ...data.Data], // Adicione os elementos diretamente
+            }));
+       }}
+       catch(error:any){
+        btnRef.current.disabled = false;
+        btnRef.current.innerHTML = 'Carregar mais';
+        if(error.name === 'AbortError'){
+            abortController2.abort();
+            return null;
+        }
+       }
+    }
+
     return (
         <>
                   <SectionTitle>{TitleMenu}</SectionTitle>
@@ -104,7 +134,7 @@ const ListenItens = ({Url, TitleMenu,Token,page}: ListItens) => {
         
        </Box>
        <Box>
-       <ButtonLoad  type="button" ref={btnRef} onClick={() => setTake(take + 15)}>Carregar mais</ButtonLoad>
+       <ButtonLoad  type="button" ref={btnRef} onClick={addItens}>Carregar mais</ButtonLoad>
        </Box>
        </>
     )
