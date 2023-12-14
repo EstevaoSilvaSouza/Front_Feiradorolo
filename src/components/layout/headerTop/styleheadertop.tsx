@@ -182,6 +182,8 @@ export const BtnEntrar = styled.button`
   border: 1px solid #cfd4dd;
   cursor: pointer;
   background-color: #fff;
+  text-align:center;
+  text-decoration: none;
   width: auto;
   font-size:15px;
   min-width: 150px;
