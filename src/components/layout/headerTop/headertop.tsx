@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { AMessage, BtnAnucio, BtnEntrar, BtnSair, BtnSearch, DivHeader, DivMessage, InputSeachMenu, LinkS, Lista, LogoContainer, LogoText, MenuItem, MenuLauch } from "./styleheadertop";
 import { AuthContext } from "../../../context/Auth.context";
 import Menu from '../../../menu.png'
+import { Link } from "react-router-dom";
 
 const HeaderTop = () => {
 
@@ -61,10 +62,10 @@ const HeaderTop = () => {
                                 <LinkS to={'/notificao'} >Notificações</LinkS>
                             </MenuItem>
                             <MenuItem>
-                                {Auth ? <BtnEntrar>Painel</BtnEntrar> : <BtnEntrar onClick={()=> LoginRedirect('login')}>Entrar/Registrar</BtnEntrar>}
+                                {Auth ? <BtnEntrar onClick={() => alert("dev")}>Painel</BtnEntrar> : <BtnEntrar as={Link} to={'/login'}>Entrar/Registrar</BtnEntrar>}
                             </MenuItem>
                             <MenuItem>
-                                <BtnAnucio onClick={()=> LoginRedirect('novo-anuncio')}>Anunciar</BtnAnucio>
+                                <BtnAnucio as={Link} to={'/novo-anuncio'}>Anunciar</BtnAnucio>
                             </MenuItem>
                             <MenuItem>
                                 {Auth ? <BtnSair onClick={() => logout()}>Sair</BtnSair> : null}
